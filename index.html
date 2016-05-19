@@ -1,16 +1,16 @@
 ---
 layout: workshop
 root: .
-venue: "CQUniversity"
+venue: "Central Queensland University (CQU)"
 address: "CQUniversity North Campus, Building 10 Library, Room G.18-2, Rockhampton North, Queensland" 
 country: "au" 
 language: "en" 
-latlng:  -23.344228, 150.521026
+latlng: -23.3241079,150.5194524
 humandate: "31 May, 2016"    
-humantime: "9:00 am - 5:00 pm"   
+humantime: "9:00 am - 3:00 pm"   
 startdate: 2016-05-31   
 enddate: 2016-05-31     
-instructor: ["Paula Martinez", "Jason Bell"] 
+instructor: ["Paula Andrea Martinez"] 
 helper: ["TBD"]    
 contact: "j.bell@cqu.edu.au"    
 etherpad: "http://pad.software-carpentry.org/cqu-r"    
@@ -50,28 +50,29 @@ eventbrite:
   <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
   is to help scientists and engineers get more research done in less
   time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control and task automation.  Participants will be encouraged to
+  scientific computing. This hands-on workshop will cover basic
+  concepts and tools, including program design and task automation. Participants will be encouraged to
   help one another and to apply what they have learned to their own
   research problems.
-
 </p>
 <p align="center">
   <em>
     For more information on what we teach and why,
     please see our paper
-    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">
+      Best Practices for Scientific Computing</a>".
   </em>
 </p>
 
 <!--
   AUDIENCE
-  Explain who your audience is.  (In particular, tell readers if the
+  Explain who your audience is. (In particular, tell readers if the
   workshop is only open to people from a particular institution.
 -->
 <p>
   <strong>Who:</strong>
-  This course is being run as a one-day, standalone R session. RHD candidates and early career researchers
+  This course is being run as a one-day, standalone R session. Interested people 
+  (RHD candidates/early career researchers/researchers/staff)
   who want to learn R are welcome to attend.
   <strong>You don't need to have any previous knowledge of the tools that will
     be presented at the workshop.</strong>
@@ -98,10 +99,12 @@ eventbrite:
 <!--
   SPECIAL REQUIREMENTS
   Modify the block below if there are any special requirements.
-
+-->
 <p>
   <strong>Requirements:</strong> You will need to bring a laptop with
-  the specific software packages installed as detailed <a href="#setup">below</a>. -->
+  the specific software packages installed as detailed, we will also use the UCQ High Performance Computing account, 
+  if you do not have one already please get in touch.
+  <a href="#setup">below</a>. 
   You are required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
@@ -144,13 +147,12 @@ eventbrite:
     <h3>Day 1</h3>
     <table class="table table-striped">
       <tr> <td>08:30</td>  <td>Setting up and software installation help</td> </tr>
-      <tr> <td>09:00</td>  <td>Introduction to R</td> </tr>
+      <tr> <td>09:00</td>  <td>Introduction to R and R studio</td> </tr>
       <tr> <td>10:30</td>  <td>Morning tea</td> </tr>
-      <tr> <td>11:00</td>  <td>Rstudio, R help</td> </tr>
+      <tr> <td>11:00</td>  <td>R for data manipulation</td> </tr>
       <tr> <td>12:30</td>  <td>Lunch break</td> </tr>
       <tr> <td>13:30</td>  <td>Graphing and using packages in R</td> </tr>
-      <tr> <td>15:00</td>  <td>Afternoon tea</td> </tr>
-      <tr> <td>15:30</td>  <td>Making your own R scripts</td> </tr>
+      <tr> <td>15:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
 </div>
@@ -192,12 +194,11 @@ eventbrite:
   </div>
 -->
   <div class="col-md-6">
-    <h3>Programming in R</h3>
+    <h3>R for data analyis</h3>
     <ul>
+      <li>Introduction to R and R studio</li>
       <li>Working with vectors and data frames</li>
       <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
       <li>Using R from the command line</li>
       <li><a href="http://swcarpentry.github.io/r-novice-gapminder/reference.html"  target="_blank">Reference...</a></li>
     </ul>
@@ -236,7 +237,7 @@ eventbrite:
 
 </div>
   -->
-<hr/>
+
 
 <!--
   SETUP
@@ -249,7 +250,8 @@ eventbrite:
 -->
 
 <h2 id="setup">Wireless Internet Access</h2>
-<p> You will be able to access wireless internet through eduroam - please check your institution's IT support pages for how to connect. Try to connect to eduroam at your institution before you come to the workshop as this saves a lot of time.
+<p> You will be able to access wireless internet through eduroam - please check your institution's IT support pages 
+for how to connect. Try to connect to eduroam at your institution before you come to the workshop as this saves a lot of time.
 <p>
 <!--
 <h2 id="setup">Setup Option 1: Local Installation On Your Laptop</h2>
@@ -262,9 +264,10 @@ before 9:00am to get your install checked by a helper.</strong>
   <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 -->
-
-<div id="shell"> <!-- Start of 'shell' section. -->
+<!-- Start of 'shell' section. -->
 <!--  
+<div id="shell"> 
+
 <h3>The Bash Shell</h3>
 
   <p>
@@ -350,9 +353,11 @@ before 9:00am to get your install checked by a helper.</strong>
 
 <!-- <!-- End of 'shell' section. -->
 
-<div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
+<!--
+Start of 'Git' section. GitHub browser compatability
            is given at https://help.github.com/articles/supported-browsers/-->
-<!--  <h3>Git</h3>
+<!--<div id='git'>
+<h3>Git</h3>
 
   <p>
     Git is a version control system that lets you track who made changes
@@ -399,8 +404,8 @@ before 9:00am to get your install checked by a helper.</strong>
 
 <!-- End of 'Git' section. -->
 
-<div id="editor"> <!-- Start of 'editor' section. -->
-  <!--<h3>Text Editor</h3>
+<!-- Start of 'editor' section. -->
+  <!--<div id="editor"> <h3>Text Editor</h3>
 
   <p>
     When you're writing code, it's nice to have a text editor that is
@@ -438,7 +443,7 @@ before 9:00am to get your install checked by a helper.</strong>
       </p>
     </div>
   </div> -->
-</div> <!-- End of 'editor' section. -->
+<!--</div> --> <!-- End of 'editor' section. -->
 
 
 <div id="r"> <!-- Start of 'R' section. -->
@@ -446,7 +451,7 @@ before 9:00am to get your install checked by a helper.</strong>
 
   <p>
     <a href="http://www.r-project.org" target="_blank">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
+    that is especially powerful for data exploration, visualisation, and
     statistical analysis. To interact with R, we use
     <a href="http://www.rstudio.com/" target="_blank">RStudio</a>.
   </p>
